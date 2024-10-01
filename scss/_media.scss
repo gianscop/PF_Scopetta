@@ -27,21 +27,34 @@
       display: none; /* Oculta la barra de navegación original en pantallas pequeñas */
   }
 
-  /* Mostrar la barra de navegación móvil de Bootstrap */
+  /* Estilos del menú de navegación móvil */
   .navbar {
       display: block; /* Muestra la barra de navegación móvil en pantallas pequeñas */
-  }
-}
-
-/* Ajustes para pantallas grandes */
-@media (min-width: 769px) {
-  /* Ocultar la barra de navegación móvil en pantallas grandes */
-  .navbar {
-      display: none; /* Oculta la barra de navegación móvil */
+      background-color: $color-negro-transparente; /* Color de fondo oscuro, puedes ajustar según tus variables */
+      padding: 10px 0; /* Padding superior e inferior */
+      text-align: center; /* Centra los elementos del menú */
   }
 
-  /* Mostrar la barra de navegación original en pantallas grandes */
-  nav {
-      display: block; /* Muestra la barra de navegación original en pantallas grandes */
+  .navbar ul {
+      list-style-type: none; /* Elimina el estilo por defecto de las listas */
+      padding: 0; /* Elimina el padding por defecto */
+  }
+
+  .navbar ul li {
+      display: inline-block; /* Los elementos del menú se alinean horizontalmente */
+      margin: 0 15px; /* Espacio entre los elementos del menú */
+  }
+
+  .navbar ul li a {
+      color: $color-texto-blanco; /* Color del texto de los enlaces */
+      text-decoration: none; /* Elimina el subrayado de los enlaces */
+      font-weight: bold; /* Hace que los enlaces estén en negrita */
+      padding: 5px 10px;
+      transition: background-color 0.3s; /* Suaviza el cambio de color de fondo en hover */
+  }
+
+  .navbar ul li a:hover {
+      background-color: $color-verde-hover; /* Color de fondo al pasar el mouse */
+      border-radius: $radio-borde-pequeno; /* Esquinas redondeadas en el estado hover */
   }
 }
