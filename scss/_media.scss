@@ -30,26 +30,48 @@
   /* Estilos del menú de navegación móvil */
   .navbar {
       display: block; /* Muestra la barra de navegación móvil en pantallas pequeñas */
-      background-color: $color-negro-transparente; /* Color de fondo oscuro, puedes ajustar según tus variables */
+      @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-medio);
       padding: 10px 0; /* Padding superior e inferior */
       text-align: center; /* Centra los elementos del menú */
+      position: relative; /* Permitir que el menú se expanda fuera del header */
+  }
+
+  /* Ajustes para centrar el botón de hamburguesa */
+  .navbar-toggler {
+      margin: 0 auto; /* Centra el botón */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  /* Hacer que el menú desplegable aparezca debajo del header */
+  .navbar-collapse {
+      position: absolute;
+      top: 100%; /* Despliega debajo del header */
+      left: 0;
+      width: 100%; /* Asegura que ocupe todo el ancho */
+      background-color: $color-negro-transparente; /* Fondo del menú desplegable */
+      border-radius: $radio-borde-medio; /* Bordes redondeados */
+      box-shadow: $sombra-fuerte; /* Sombra para resaltar el menú */
+      z-index: 1000; /* Asegura que se superponga sobre el contenido */
   }
 
   .navbar ul {
       list-style-type: none; /* Elimina el estilo por defecto de las listas */
       padding: 0; /* Elimina el padding por defecto */
+      margin: 0; /* Asegura que no haya margen extra */
   }
 
   .navbar ul li {
-      display: inline-block; /* Los elementos del menú se alinean horizontalmente */
-      margin: 0 15px; /* Espacio entre los elementos del menú */
+      margin: 15px 0; /* Espacio entre los elementos del menú */
+      display: block; /* Los elementos del menú se alinean verticalmente */
   }
 
   .navbar ul li a {
       color: $color-texto-blanco; /* Color del texto de los enlaces */
       text-decoration: none; /* Elimina el subrayado de los enlaces */
       font-weight: bold; /* Hace que los enlaces estén en negrita */
-      padding: 5px 10px;
+      padding: 10px 15px;
       transition: background-color 0.3s; /* Suaviza el cambio de color de fondo en hover */
   }
 
