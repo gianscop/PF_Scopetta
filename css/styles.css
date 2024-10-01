@@ -306,7 +306,6 @@ nav ul li a:hover {
   }
 }
 /* Ajustes solo para dispositivos móviles */
-/* Ajustes solo para dispositivos móviles */
 @media (max-width: 768px) {
   /* Barra de navegación fija en la parte superior */
   nav {
@@ -323,22 +322,24 @@ nav ul li a:hover {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    flex-direction: column; /* Coloca los elementos en columnas */
+    align-items: center; /* Centra los elementos en la columna */
   }
   nav ul li {
-    display: inline; /* Alinea los elementos en fila */
+    margin: 10px 0; /* Espaciado vertical entre los elementos */
   }
   nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px; /* Ajusta el tamaño de letra para móviles */
+    font-size: 18px; /* Tamaño de letra ajustado */
+    padding: 10px 0; /* Espaciado adicional para facilitar clics */
   }
   nav ul li a:hover {
     text-decoration: underline;
   }
   /* Ajustar el contenido principal para que no se superponga con la barra */
   body {
-    margin-top: 70px; /* Ajusta el margen superior del body para que no se superponga con el nav */
+    margin-top: 200px; /* Ajusta el margen superior del body para que no se superponga con el nav */
   }
 }
 
