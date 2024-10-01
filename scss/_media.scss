@@ -18,26 +18,29 @@
 
 /* Ajustes de responsividad */
 @media (max-width: 768px) {
-    
-        nav ul {
-            display: block; /* Menú vertical en pantallas pequeñas */
-        }
-    
-        nav ul li {
-            display: inline; /* Los elementos del menú se apilan horizontalmente */
-            margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
-        }
-    
-        .featured-matches .grid {
-            grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-        }
-    
-    /* Ajuste del margen superior para el body en móviles */
-    body {
-        margin-top: 80px; /* Ajusta el margen superior según sea necesario */
+    nav ul {
+        flex-direction: column;  /* Cambiamos el menú a columna en móviles */
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para destacar el menú */
+        position: absolute;
+        top: 60px; /* Ajustamos debajo del header */
+        left: 0;
+        right: 0;
+        padding: 10px 0;
     }
 
-    .featured-matches .grid {
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 15px;
+        color: white;
+    }
+
+    header {
+        position: relative;
     }
 }

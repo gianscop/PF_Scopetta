@@ -205,7 +205,7 @@ header {
     display: block; /* Menú vertical en pantallas pequeñas */
   }
   nav ul li {
-    display: inline; /* Los elementos del menú se apilan verticalmente */
+    display: inline; /* Los elementos del menú se apilan horizontalmente */
     margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
   }
   .featured-matches .grid {
@@ -213,7 +213,7 @@ header {
   }
   /* Ajuste del margen superior para el body en móviles */
   body {
-    margin-top: 120px; /* Ajusta el margen superior según sea necesario */
+    margin-top: 80px; /* Ajusta el margen superior según sea necesario */
   }
   .featured-matches .grid {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
