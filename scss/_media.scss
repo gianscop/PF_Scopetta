@@ -24,7 +24,7 @@
         }
     
         nav ul li {
-            display: block; /* Los elementos del menú se apilan verticalmente */
+            display: inline; /* Los elementos del menú se apilan horizontalmente */
             margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
         }
     
