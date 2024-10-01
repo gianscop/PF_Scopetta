@@ -17,46 +17,51 @@
 }
 
 /* Ajustes solo para dispositivos móviles */
-//* Ajustes solo para dispositivos móviles */
 @media (max-width: 768px) {
-  
-    /* Barra de navegación fija en la parte superior */
+
+    /* Barra de navegación fija y responsiva */
     nav {
-      position: fixed; /* Fija la barra de navegación */
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 999; /* Coloca la barra encima del contenido */
       background-color: black;
-      padding: 10px 0; /* Ajusta el padding */
+      z-index: 999;
+      padding: 10px 0;
+      box-sizing: border-box;
     }
   
     nav ul {
       list-style: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
       display: flex;
-      flex-direction: column; /* Coloca los elementos en columnas */
-      align-items: center; /* Centra los elementos en la columna */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   
     nav ul li {
-      margin: 10px 0; /* Espaciado vertical entre los elementos */
+      margin: 0;
+      width: 100%;
     }
   
     nav ul li a {
+      display: block;
+      padding: 15px;
+      text-align: center;
       color: white;
       text-decoration: none;
-      font-size: 18px; /* Tamaño de letra ajustado */
-      padding: 10px 0; /* Espaciado adicional para facilitar clics */
+      font-size: 18px;
+      width: 100%;
     }
   
     nav ul li a:hover {
-      text-decoration: underline;
+      background-color: #333;
     }
   
-    /* Ajustar el contenido principal para que no se superponga con la barra */
+    /* Ajustar el contenido para evitar superposición */
     body {
-      margin-top: 200px; /* Ajusta el margen superior del body para que no se superponga con el nav */
+      margin-top: 60px; /* Ajusta este valor si la barra es más alta */
     }
   }
