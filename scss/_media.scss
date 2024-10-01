@@ -16,13 +16,25 @@
     }
 }
 
-  /* Estilos para móviles nav bar */
-@media (min-width: 769px) {
-  #navLinks {
-      display: flex; /* Mostrar el menú normalmente en pantallas grandes */
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  nav ul {
+      display: none; /* Ocultar el menú por defecto en móvil */
+      flex-direction: column; /* Cambia a columna cuando se muestra */
+      background-color: #333; /* Fondo para el menú */
+      position: absolute; /* Para superponer el menú */
+      top: 100%; /* Justo debajo del header */
+      width: 100%; /* Para ocupar el ancho completo */
+      z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+
+  nav.active ul {
+      display: flex; /* Mostrar el menú cuando está activo */
   }
 
   .navbar-toggler {
-      display: none; /* Ocultar el botón en pantallas grandes */
+      background-color: transparent; /* Fondo transparente para el botón */
+      border: none; /* Sin borde */
+      cursor: pointer; /* Cursor pointer para el botón */
   }
 }
