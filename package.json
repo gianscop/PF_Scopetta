@@ -1,0 +1,11 @@
+{
+  "name": "futbolmatch",
+  "version": "1.0.0",
+  "description": "Proyecto FutbolMatch",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css --source-map"
+  },
+  "author": "gian",
+  "license": "ISC"
+}

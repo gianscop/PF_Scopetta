@@ -1,0 +1,27 @@
+.card {
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-pequeño);
+    border: none; /* Sin bordes para un aspecto más limpio */
+    color: white; /* Texto blanco para contraste */
+    transition: transform 0.3s ease-in-out; /* Transición para el efecto de hover */
+}
+
+.card-body {
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-pequeño);
+    padding: 20px; /* Espaciado interno para contenido */
+}
+
+
+/* Efecto de hover en la tarjeta */
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor */
+}
+
+/* Estilo del botón dentro de la tarjeta */
+.card .btn-secondary {
+    @include boton-verde(8px 15px); /* Aplica el mixin aquí también */
+}
+
+
+.card .btn-secondary:hover {
+    background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
+}

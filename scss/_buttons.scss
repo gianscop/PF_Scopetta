@@ -1,0 +1,10 @@
+
+
+.btn-primary {
+    @include boton-verde(); /* Aplica el mixin */
+    width: 100%; /* El botón ocupa todo el ancho disponible */
+}
+
+.btn-secondary {
+    @include boton-verde(8px 15px); /* Cambiar el padding específico */
+}

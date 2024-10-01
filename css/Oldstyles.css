@@ -1,0 +1,312 @@
+/* Reset básico - Elimina márgenes y padding por defecto de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border no aumenten el ancho y alto de los elementos */
+}
+
+/* Estilos generales para el cuerpo */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente general del sitio */
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+    color: #fff; /* Color del texto blanco para contraste con el fondo */
+    background: url(../imagenes/cancha.jpg) no-repeat center center fixed; /* Imagen de fondo fija y centrada */
+    background-size: cover; /* Cubre toda la pantalla con la imagen de fondo */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la pantalla */
+    margin-top: 100px;
+}
+
+/* Estilo general para el main content */
+main {
+    margin-top: 140px; /* Deja espacio para el header fijo */
+    padding: 20px; /* Espacio alrededor del contenido */
+    color: white;
+}
+
+/* Estilos del header */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente negro */
+    color: white;
+    padding: 10px 0;
+    position: fixed; /* Fija el header en la parte superior durante el scroll */
+    width: 100%; /* El header ocupa todo el ancho */
+    top: 0; /* Anclado en la parte superior de la pantalla */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de elevación */
+}
+
+/* Estilo del logo */
+.logo img {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el logo */
+    border-radius: 20px; /* Esquinas redondeadas */
+    height: 50px; /* Altura fija del logo */
+    width: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Centra el logo horizontalmente con margin auto */
+    margin: 0 auto; /* Centra el logo dentro del contenedor */
+}
+
+
+/* Estilos del footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente similar al header */
+    color: white;
+    padding: 10px 0; /* Ajusta el padding al tamaño deseado */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho de la pantalla */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Sombra en la parte superior del footer */
+    text-align: center; /* Centra el contenido del footer */
+    position: relative; /* Mantiene el footer en la parte inferior sin fijarlo */
+    z-index: 1000; /* Asegura que el footer se muestre correctamente sobre otros elementos */
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente negro */
+    border: none; /* Sin bordes para un aspecto más limpio */
+    border-radius: 8px; /* Bordes redondeados para coincidir con el estilo de los botones */
+    color: white; /* Texto blanco para contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para un efecto de elevación */
+    transition: transform 0.3s ease-in-out; /* Transición para el efecto de hover */
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.card-body {
+    padding: 20px; /* Espaciado interno para contenido */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente similar al header */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Sombra en la parte superior del footer */
+}
+
+/* Efecto de hover en la tarjeta */
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor */
+}
+
+/* Estilo del botón dentro de la tarjeta */
+.card .btn-secondary {
+    display: inline-block; /* Se comporta como un elemento inline-block */
+    padding: 8px 15px;
+    background-color: #006400; /* Color de fondo verde oscuro */
+    color: white; /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Negrita para el texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+.card .btn-secondary:hover {
+    background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
+}
+
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style-type: none; /* Elimina el estilo por defecto de las listas */
+    text-align: center; /* Centra los elementos del menú */
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block; /* Los elementos del menú se alinean horizontalmente */
+    margin: 0 15px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Hace que los enlaces estén en negrita */
+    padding: 5px 10px;
+    transition: background-color 0.3s; /* Suaviza el cambio de color de fondo en hover */
+}
+
+nav ul li a:hover {
+    background-color: #004d00; /* Color de fondo al pasar el mouse */
+    border-radius: 5px; /* Esquinas redondeadas en el estado hover */
+}
+
+/* Estilos de los botones */
+.btn-primary {
+    width: 100%; /* El botón ocupa todo el ancho disponible */
+    padding: 10px;
+    background-color: #006400; /* Color de fondo verde oscuro */
+    color: white; /* Color de texto blanco */
+    border: none; /* Elimina bordes por defecto */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px;
+    cursor: pointer; /* Cambia el cursor a pointer al pasar sobre el botón */
+    transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+.btn-primary:hover {
+    background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
+}
+
+.btn-secondary {
+    display: inline-block; /* Se comporta como un elemento inline-block */
+    padding: 8px 15px;
+    background-color: #006400; /* Color de fondo verde oscuro */
+    color: white; /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Negrita para el texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+
+/* Grid para los partidos destacados */
+.featured-matches .grid {
+    display: grid; /* Uso de grid para disposición de partidos */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Espacio entre elementos de la grid */
+    margin: 20px;
+}
+
+/* Estilo para la sección "about" de página inicio, donde se describe la página */
+.about {
+    text-align: center; /* Centra el texto */
+    padding: 40px 20px; /* Espacio alrededor del contenido */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    border-radius: 10px; /* Esquinas redondeadas */
+    color: #fff; /* Texto en blanco para contraste */
+    max-width: 800px; /* Limita el ancho de la sección */
+    margin: 40px auto; /* Centra la sección dentro de su contenedor */
+}
+
+.about h2 {
+    font-family: 'Poppins', sans-serif; /* Fuente atractiva para los títulos */
+    font-size: 2rem; /* Tamaño del título */
+    font-weight: 600; /* Negrita */
+    margin-bottom: 20px; /* Espacio debajo de cada título */
+    text-align: center;
+}
+
+.about p {
+    font-family: 'Roboto', sans-serif; /* Fuente elegante para el texto */
+    font-size: 1.2rem; /* Tamaño del texto */
+    line-height: 1.8; /* Mejora la legibilidad */
+    margin-bottom: 30px; /* Espacio entre párrafos */
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+
+
+/* Estilos de los formularios */
+form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centra el formulario horizontalmente */
+    padding: 20px; /* Espacio interior del formulario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+form label {
+    display: block; /* Hace que los labels ocupen todo el ancho disponible */
+    margin-bottom: 10px;
+    font-weight: bold; /* Negrita para los labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="datetime-local"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%; /* Los campos ocupan todo el ancho disponible */
+    padding: 10px;
+    margin-bottom: 20px; /* Espacio inferior entre campos */
+    border: 1px solid #ccc; /* Borde ligero alrededor de los campos */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+
+/* Mensajes de error y éxito */
+.message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Espacio abajo de los mensajes */
+}
+
+.message.error {
+    background-color: #f8d7da; /* Fondo rojo claro para errores */
+    color: #721c24; /* Texto rojo oscuro para errores */
+}
+
+.message.success {
+    background-color: #d4edda; /* Fondo verde claro para éxitos */
+    color: #155724; /* Texto verde oscuro para éxitos */
+}
+
+.news {
+    padding: 40px 0;
+}
+
+.news h2 {
+    font-size: 2rem;
+    color: #fff; /* Color del encabezado */
+    margin-bottom: 20px;
+}
+
+.news-card {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff; /* Color del texto */
+}
+
+.news-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.iframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.iframe-container iframe {
+    flex: 1 1 calc(50% - 10px);
+    height: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .iframe-container iframe {
+        flex: 1 1 100%;
+    }
+}
+
+/* Ajustes de responsividad para artículos */
+@media (max-width: 768px) {
+    .news article {
+        padding: 15px;
+    }
+
+    .iframe-container {
+        padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
+    }
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        display: block; /* Menú vertical en pantallas pequeñas */
+    }
+
+    nav ul li {
+        display: block; /* Los elementos del menú se apilan verticalmente */
+        margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
+    }
+
+    .featured-matches .grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}

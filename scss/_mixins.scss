@@ -1,0 +1,24 @@
+// Archivo: _mixins.scss
+@mixin fondo-transparente($color-fondo, $radio-borde, $sombra, $padding) {
+  background-color: $color-fondo;
+  border-radius: $radio-borde;
+  box-shadow: $sombra;
+  padding: $padding;
+}
+
+@mixin boton-verde($padding: 8px 15px, $border-radius: 5px) {
+  display: inline-block; /* Se comporta como un elemento inline-block */
+  padding: $padding; /* Padding personalizable */
+  color: white; /* Color de texto blanco */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-weight: bold; /* Negrita para el texto */
+  border-radius: $border-radius; /* Esquinas redondeadas personalizables */
+  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+  background-color: $color-verde-oscuro; /* Color de fondo verde oscuro */
+
+  &:hover {
+      background-color: $color-verde-hover; /* Cambio de color de fondo al pasar el mouse */
+      border-radius: $border-radius; /* Asegura esquinas redondeadas en hover */
+  }
+}
+

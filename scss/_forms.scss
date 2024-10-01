@@ -1,0 +1,45 @@
+/* Estilos de los formularios */
+form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centra el formulario horizontalmente */
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-grande); /* Aplicar el mixin */
+}
+
+/* Resto de estilos del formulario */
+form label {
+    display: block; /* Hace que los labels ocupen todo el ancho disponible */
+    margin-bottom: 10px;
+    font-weight: bold; /* Negrita para los labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="datetime-local"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%; /* Los campos ocupan todo el ancho disponible */
+    padding: 10px;
+    margin-bottom: 20px; /* Espacio inferior entre campos */
+    border: 1px solid #ccc; /* Borde ligero alrededor de los campos */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+
+/* Mensajes de error y éxito */
+.message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Espacio abajo de los mensajes */
+}
+
+.message.error {
+    background-color: #f8d7da; /* Fondo rojo claro para errores */
+    color: #721c24; /* Texto rojo oscuro para errores */
+}
+
+.message.success {
+    background-color: #d4edda; /* Fondo verde claro para éxitos */
+    color: #155724; /* Texto verde oscuro para éxitos */
+}

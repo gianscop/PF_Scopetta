@@ -1,0 +1,19 @@
+
+header {
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, 10px); /* Uso del mixin */
+    color: white;
+    position: fixed; /* Fija el header en la parte superior durante el scroll */
+    width: 100%; /* El header ocupa todo el ancho */
+    top: 0; /* Anclado en la parte superior de la pantalla */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+/* Estilo del logo */
+.logo img {
+    background-color: $color-negro-transparente; /* Fondo semitransparente para el logo */
+    border-radius: 20px; /* Esquinas redondeadas */
+    height: 50px; /* Altura fija del logo */
+    width: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Centra el logo horizontalmente con margin auto */
+    margin: 0 auto; /* Centra el logo dentro del contenedor */
+}

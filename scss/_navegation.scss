@@ -1,0 +1,24 @@
+/* Estilos del menú de navegación */
+nav ul {
+    list-style-type: none; /* Elimina el estilo por defecto de las listas */
+    text-align: center; /* Centra los elementos del menú */
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block; /* Los elementos del menú se alinean horizontalmente */
+    margin: 0 15px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Hace que los enlaces estén en negrita */
+    padding: 5px 10px;
+    transition: background-color 0.3s; /* Suaviza el cambio de color de fondo en hover */
+}
+
+nav ul li a:hover {
+    background-color: #004d00; /* Color de fondo al pasar el mouse */
+    border-radius: 5px; /* Esquinas redondeadas en el estado hover */
+}

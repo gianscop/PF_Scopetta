@@ -1,0 +1,35 @@
+
+
+.news-card {
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-pequeño);
+    padding: 20px; /* Espaciado interno para contenido */
+    color: #fff; /* Color del texto */
+}
+
+.news {
+    padding: 40px 0;
+}
+
+.news h2 {
+    font-size: 2rem;
+    color: #fff; /* Color del encabezado */
+    margin-bottom: 20px;
+}
+
+.news-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.iframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.iframe-container iframe {
+    flex: 1 1 calc(50% - 10px);
+    height: 200px;
+    border: none;
+    border-radius: 5px;
+}

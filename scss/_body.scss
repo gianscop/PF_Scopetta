@@ -1,0 +1,48 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente general del sitio */
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+    color: #fff; /* Color del texto blanco para contraste con el fondo */
+    background: url(../imagenes/cancha.jpg) no-repeat center center fixed; /* Imagen de fondo fija y centrada */
+    background-size: cover; /* Cubre toda la pantalla con la imagen de fondo */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la pantalla */
+    margin-top: 100px;
+}
+
+/* Estilo general para el main content */
+main {
+    padding: 20px; /* Espacio alrededor del contenido */
+    color: white;
+}
+
+
+/* Estilo para la sección "about" de página inicio, donde se describe la página */
+.about {
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-grande);
+    color: $color-texto-blanco; /* Color de texto */
+    max-width: 800px; /* Limita el ancho de la sección */
+    margin: $margen-vertical auto; /* Centra verticalmente */
+    text-align: center; /* Centra el texto */
+}
+
+.about h2 {
+    font-family: 'Poppins', sans-serif; /* Fuente atractiva para los títulos */
+    font-size: 2rem; /* Tamaño del título */
+    font-weight: 600; /* Negrita */
+    margin-bottom: 20px; /* Espacio debajo de cada título */
+    text-align: center;
+}
+
+.about p {
+    font-family: 'Roboto', sans-serif; /* Fuente elegante para el texto */
+    font-size: 1.2rem; /* Tamaño del texto */
+    line-height: 1.8; /* Mejora la legibilidad */
+    margin-bottom: 30px; /* Espacio entre párrafos */
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Centra el contenido */
+}
+

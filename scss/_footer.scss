@@ -1,0 +1,19 @@
+/* Estilos del footer */
+footer {
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, 10px); /* Uso del mixin */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho de la pantalla */
+    text-align: center; /* Centra el contenido del footer */
+    position: relative; /* Mantiene el footer en la parte inferior sin fijarlo */
+    z-index: 1000; /* Asegura que el footer se muestre correctamente sobre otros elementos */
+}
+
+footer .social a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer .social a:hover {
+    text-decoration: underline;
+}
