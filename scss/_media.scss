@@ -1,90 +1,74 @@
-/* Diseño responsivo */
+/* Estilos para pantallas pequeñas (por ejemplo, móviles) */
 @media (max-width: 768px) {
-  /* Ajustes generales para pantallas pequeñas */
-  .iframe-container iframe {
-      flex: 1 1 100%;
-  }
-
-  .news article {
-      padding: 15px;
-  }
-
-  .iframe-container {
-      padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
-  }
-
-  /* Ajuste del margen superior para el body en móviles */
-  body {
-      margin-top: 130px; /* Ajusta el margen superior según sea necesario */
-  }
-
-  .featured-matches .grid {
-      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-  }
-
   /* Ocultar la barra de navegación original en pantallas pequeñas */
   nav {
-      display: none; /* Oculta la barra de navegación original en pantallas pequeñas */
+    display: none; /* Oculta la barra de navegación original */
   }
 
   /* Estilos del menú de navegación móvil */
   .navbar {
-      display: block; /* Muestra la barra de navegación móvil en pantallas pequeñas */
-      @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-medio);
-      padding: 10px 0; /* Padding superior e inferior */
-      text-align: center; /* Centra los elementos del menú */
-      position: relative; /* Permitir que el menú se expanda fuera del header */
+    display: block; /* Muestra la barra de navegación móvil */
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-medio);
+    padding: 10px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centra los elementos del menú */
+    position: relative; /* Permitir que el menú se expanda fuera del header */
   }
 
   /* Ajustes para centrar el botón de hamburguesa */
   .navbar-toggler {
-      margin: 0 auto; /* Centra el botón */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 1001;
+    margin: auto; /* Centra el botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
   }
 
+  /* Centra el contenido de la barra */
   .container {
-      display: flex;
-      justify-content: center; /* Centra el contenido de la navbar */
-      align-items: center;
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    align-items: center;
   }
 
-  /* Hacer que el menú desplegable aparezca debajo del header */
+  /* Menú desplegable debajo del header */
   .navbar-collapse {
-      position: absolute;
-      top: 100%; /* Despliega debajo del header */
-      left: 0;
-      width: 100%; /* Asegura que ocupe todo el ancho */
-      background-color: $color-negro-transparente; /* Fondo del menú desplegable */
-      border-radius: $radio-borde-medio; /* Bordes redondeados */
-      box-shadow: $sombra-fuerte; /* Sombra para resaltar el menú */
-      z-index: 1000; /* Asegura que se superponga sobre el contenido */
+    position: absolute;
+    top: 100%; /* Hace que el menú se despliegue debajo del header */
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    background-color: $color-negro-transparente; /* Fondo del menú desplegable */
+    border-radius: $radio-borde-medio; /* Bordes redondeados */
+    box-shadow: $sombra-fuerte; /* Sombra */
+    z-index: 1000; /* Superpone sobre el contenido */
   }
 
+  /* Estilo de la lista del menú */
   .navbar ul {
-      list-style-type: none; /* Elimina el estilo por defecto de las listas */
-      padding: 0; /* Elimina el padding por defecto */
-      margin: 0; /* Asegura que no haya margen extra */
+    list-style-type: none; /* Elimina el estilo de lista predeterminado */
+    padding: 0;
+    margin: 0;
+    text-align: center;
   }
 
+  /* Estilo de los elementos del menú */
   .navbar ul li {
-      margin: 15px 0; /* Espacio entre los elementos del menú */
-      display: block; /* Los elementos del menú se alinean verticalmente */
+    margin: 10px 0; /* Espacio entre elementos del menú */
+    display: block;
   }
 
+  /* Enlaces dentro del menú */
   .navbar ul li a {
-      color: $color-texto-blanco; /* Color del texto de los enlaces */
-      text-decoration: none; /* Elimina el subrayado de los enlaces */
-      font-weight: bold; /* Hace que los enlaces estén en negrita */
-      padding: 10px 15px;
-      transition: background-color 0.3s; /* Suaviza el cambio de color de fondo en hover */
+    color: $color-texto-blanco;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s; /* Efecto suave al pasar el mouse */
   }
 
+  /* Hover en los enlaces */
   .navbar ul li a:hover {
-      background-color: $color-verde-hover; /* Color de fondo al pasar el mouse */
-      border-radius: $radio-borde-pequeno; /* Esquinas redondeadas en el estado hover */
+    background-color: $color-verde-hover;
+    border-radius: $radio-borde-pequeno;
   }
 }
