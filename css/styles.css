@@ -201,8 +201,27 @@ header {
     padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
   }
 }
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .iframe-container iframe {
+        flex: 1 1 100%;
+    }
+}
+
+/* Ajustes de responsividad para artículos */
+@media (max-width: 768px) {
+    .news article {
+        padding: 15px;
+    }
+
+    .iframe-container {
+        padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
+    }
+}
+
 /* Ajustes de responsividad */
 @media (max-width: 768px) {
+<<<<<<< HEAD
   nav ul {
     display: block; /* Menú vertical en pantallas pequeñas */
   }
@@ -227,23 +246,30 @@ nav ul {
   text-align: center; /* Centra los elementos del menú */
   padding: 10px 0;
 }
+=======
+    
+        nav ul {
+            display: block; /* Menú vertical en pantallas pequeñas */
+        }
+    
+        nav ul li {
+            display: block; /* Los elementos del menú se apilan verticalmente */
+            margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
+        }
+    
+        .featured-matches .grid {
+            grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        }
+    
+    /* Ajuste del margen superior para el body en móviles */
+    body {
+        margin-top: 80px; /* Ajusta el margen superior según sea necesario */
+    }
+>>>>>>> 538f803186ea70fa3a85068f402340ee487f3a1a
 
-nav ul li {
-  display: inline-block; /* Los elementos del menú se alinean horizontalmente */
-  margin: 0 15px; /* Espacio entre los elementos del menú */
-}
-
-nav ul li a {
-  color: white; /* Color del texto de los enlaces */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  font-weight: bold; /* Hace que los enlaces estén en negrita */
-  padding: 5px 10px;
-  transition: background-color 0.3s; /* Suaviza el cambio de color de fondo en hover */
-}
-
-nav ul li a:hover {
-  background-color: #004d00; /* Color de fondo al pasar el mouse */
-  border-radius: 5px; /* Esquinas redondeadas en el estado hover */
+    .featured-matches .grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
 }
 
 .news-card {
