@@ -290,58 +290,48 @@ nav ul li a:hover {
   background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
 }
 
-/* Estilos para pantallas pequeñas (por ejemplo, móviles) */
 @media (max-width: 768px) {
-  /* Centrar el botón de hamburguesa */
+  .iframe-container iframe {
+    flex: 1 1 100%;
+  }
+}
+/* Ajustes de responsividad para artículos */
+@media (max-width: 768px) {
+  .news article {
+    padding: 15px;
+  }
+  .iframe-container {
+    padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
+  }
+}
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+  nav ul {
+    display: block; /* Menú vertical en pantallas pequeñas */
+  }
+  nav ul li {
+    display: block; /* Los elementos del menú se apilan verticalmente */
+    margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
+  }
+  .featured-matches .grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: block; /* Mostrar navbar en móvil */
+  }
   .navbar-toggler {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto; /* Centrar el botón de hamburguesa */
   }
-  /* Menú desplegable que ocupe todo el ancho */
   .navbar-collapse {
-    position: absolute;
-    top: 100%; /* Hace que el menú se despliegue debajo del header */
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo del menú desplegable */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Sombra */
-    z-index: 1000; /* Superponer sobre el contenido */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho de la pantalla */
   }
-  /* Ajustar el contenido dentro del contenedor */
-  .container {
-    display: flex;
-    justify-content: center; /* Centra los elementos dentro del contenedor */
-    align-items: center;
-  }
-  /* Lista de navegación (sin bullets) */
   .navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%; /* Ocupa todo el ancho */
-    text-align: center;
+    text-align: center; /* Centrar los enlaces del menú */
   }
-  /* Elementos de la lista */
   .navbar-nav .nav-item {
-    margin: 10px 0; /* Espacio entre elementos */
-  }
-  /* Enlaces dentro del menú */
-  .navbar-nav .nav-link {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-    display: block;
-    background-color: #004d00; /* Puedes ajustar los colores a los de tu página */
-    border-radius: 5px;
-  }
-  /* Hover en los enlaces */
-  .navbar-nav .nav-link:hover {
-    background-color: #001a00;
+    margin: 10px 0; /* Añadir espacio entre los enlaces */
   }
 }
 
