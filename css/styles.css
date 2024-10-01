@@ -201,72 +201,29 @@ header {
 }
 /* Ajustes de responsividad */
 @media (max-width: 768px) {
-  nav {
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
-    padding: 10px; /* Reduce el padding */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave */
-    overflow: hidden; /* Evita desbordes */
-    margin-top: -20px; /* Mueve la nav bar hacia arriba */
-  }
-  nav ul {
-    display: flex; /* Usa flexbox */
-    flex-direction: column; /* Organiza en columnas */
-    padding: 0; /* Sin padding extra */
-    margin: 0; /* Sin margen extra */
-    align-items: center; /* Centra horizontalmente */
-    width: 100%; /* Ocupa todo el ancho */
-  }
-  nav ul li {
-    width: 100%; /* Cada item ocupa todo el ancho */
-    margin: 5px 0; /* Espacio entre elementos */
-    text-align: center; /* Centra el texto */
-  }
-  nav ul li a {
-    display: block; /* Hace que el enlace ocupe todo el ancho */
-    padding: 12px; /* Espacio alrededor del texto */
-    font-size: 1.1rem; /* Tamaño de fuente */
-    color: white; /* Color del texto */
-    text-decoration: none; /* Sin subrayado */
-    border: 1px solid transparent; /* Para efectos de hover */
-    border-radius: 4px; /* Bordes redondeados */
-    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
-  }
-  nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo claro al pasar el mouse */
-    border-color: rgba(255, 255, 255, 0.5); /* Cambio de borde al pasar el mouse */
-  }
-  /* Ajuste del margen superior para el body en móviles */
-  body {
-    margin-top: 80px; /* Ajusta el margen superior según sea necesario */
-  }
-  .featured-matches .grid {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-  }
-}
-/* Estilos del menú de navegación */
-nav ul {
-  list-style-type: none; /* Elimina el estilo por defecto de las listas */
-  text-align: center; /* Centra los elementos del menú */
-  padding: 10px 0;
-}
+  @media (max-width: 768px) {
+    
+        nav ul {
+            display: block; /* Menú vertical en pantallas pequeñas */
+        }
+    
+        nav ul li {
+            display: inline; /* Los elementos del menú se apilan verticalmente */
+            margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
+        }
+    
+        .featured-matches .grid {
+            grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        }
+    
+    /* Ajuste del margen superior para el body en móviles */
+    body {
+        margin-top: 80px; /* Ajusta el margen superior según sea necesario */
+    }
 
-nav ul li {
-  display: inline-block; /* Los elementos del menú se alinean horizontalmente */
-  margin: 0 15px; /* Espacio entre los elementos del menú */
-}
-
-nav ul li a {
-  color: white; /* Color del texto de los enlaces */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  font-weight: bold; /* Hace que los enlaces estén en negrita */
-  padding: 5px 10px;
-  transition: background-color 0.3s; /* Suaviza el cambio de color de fondo en hover */
-}
-
-nav ul li a:hover {
-  background-color: #004d00; /* Color de fondo al pasar el mouse */
-  border-radius: 5px; /* Esquinas redondeadas en el estado hover */
+    .featured-matches .grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
 }
 
 .news-card {
