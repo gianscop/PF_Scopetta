@@ -18,14 +18,7 @@
 
 /* Ajustes de responsividad */
 @media (max-width: 768px) {
-  nav ul {
-      display: block; /* Menú vertical en pantallas pequeñas */
-  }
-
-  nav ul li {
-      display: block; /* Los elementos del menú se apilan verticalmente */
-      margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
-  }
+  
 /* Ajuste del margen superior para el body en móviles */
 body {
    margin-top: 130px; /* Ajusta el margen superior según sea necesario */
@@ -35,4 +28,27 @@ body {
       grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
   }
 }
+ 
 
+/* Ajustes para que la barra de navegación de escritorio no se muestre en móviles */
+@media (max-width: 768px) {
+  nav {
+      display: none; /* Oculta la barra de navegación original */
+  }
+  
+  /* Navegación móvil */
+  .navbar {
+      display: block; /* Muestra la barra de navegación de Bootstrap */
+  }
+}
+
+/* La barra de navegación de escritorio solo se muestra en pantallas grandes */
+@media (min-width: 769px) {
+  .navbar {
+      display: none; /* Oculta la barra de navegación móvil */
+  }
+
+  nav {
+      display: block; /* Muestra la barra de navegación original */
+  }
+}
