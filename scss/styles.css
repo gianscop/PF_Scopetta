@@ -292,27 +292,15 @@ nav ul li a:hover {
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
+  /* Ajustes generales para pantallas pequeñas */
   .iframe-container iframe {
     flex: 1 1 100%;
   }
-}
-/* Ajustes de responsividad para artículos */
-@media (max-width: 768px) {
   .news article {
     padding: 15px;
   }
   .iframe-container {
     padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
-  }
-}
-/* Ajustes de responsividad */
-@media (max-width: 768px) {
-  nav ul {
-    display: block; /* Menú vertical en pantallas pequeñas */
-  }
-  nav ul li {
-    display: block; /* Los elementos del menú se apilan verticalmente */
-    margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
   }
   /* Ajuste del margen superior para el body en móviles */
   body {
@@ -320,5 +308,58 @@ nav ul li a:hover {
   }
   .featured-matches .grid {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+  /* Ocultar la barra de navegación original en pantallas pequeñas */
+  nav {
+    display: none; /* Oculta la barra de navegación original en pantallas pequeñas */
+  }
+  /* Estilos del menú de navegación móvil */
+  .navbar {
+    display: block; /* Muestra la barra de navegación móvil en pantallas pequeñas */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    padding: 10px 0; /* Padding superior e inferior */
+    text-align: center; /* Centra los elementos del menú */
+    position: relative; /* Permitir que el menú se expanda fuera del header */
+  }
+  /* Ajustes para centrar el botón de hamburguesa */
+  .navbar-toggler {
+    margin: 0 auto; /* Centra el botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Hacer que el menú desplegable aparezca debajo del header */
+  .navbar-collapse {
+    position: absolute;
+    top: 100%; /* Despliega debajo del header */
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo del menú desplegable */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Sombra para resaltar el menú */
+    z-index: 1000; /* Asegura que se superponga sobre el contenido */
+  }
+  .navbar ul {
+    list-style-type: none; /* Elimina el estilo por defecto de las listas */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Asegura que no haya margen extra */
+  }
+  .navbar ul li {
+    margin: 15px 0; /* Espacio entre los elementos del menú */
+    display: block; /* Los elementos del menú se alinean verticalmente */
+  }
+  .navbar ul li a {
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Hace que los enlaces estén en negrita */
+    padding: 10px 15px;
+    transition: background-color 0.3s; /* Suaviza el cambio de color de fondo en hover */
+  }
+  .navbar ul li a:hover {
+    background-color: #004d00; /* Color de fondo al pasar el mouse */
+    border-radius: 5px; /* Esquinas redondeadas en el estado hover */
   }
 }/*# sourceMappingURL=styles.css.map */
