@@ -5,37 +5,27 @@
   box-sizing: border-box; /* Asegura que el padding y el border no aumenten el ancho y alto de los elementos */
 }
 
-.btn-primary {
-  display: inline-block; /* Se comporta como un elemento inline-block */
-  padding: 8px 15px; /* Padding personalizable */
-  color: white; /* Color de texto blanco */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  font-weight: bold; /* Negrita para el texto */
-  border-radius: 5px; /* Esquinas redondeadas personalizables */
-  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
-  background-color: #006400; /* Color de fondo verde oscuro */
-  /* Aplica el mixin */
-  width: 100%; /* El botón ocupa todo el ancho disponible */
-}
-.btn-primary:hover {
-  background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
-  border-radius: 5px; /* Asegura esquinas redondeadas en hover */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  /* Uso del mixin */
+  color: white;
+  position: fixed; /* Fija el header en la parte superior durante el scroll */
+  width: 100%; /* El header ocupa todo el ancho */
+  top: 0; /* Anclado en la parte superior de la pantalla */
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
 }
 
-.btn-secondary {
-  display: inline-block; /* Se comporta como un elemento inline-block */
-  padding: 8px 15px; /* Padding personalizable */
-  color: white; /* Color de texto blanco */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  font-weight: bold; /* Negrita para el texto */
-  border-radius: 5px; /* Esquinas redondeadas personalizables */
-  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
-  background-color: #006400; /* Color de fondo verde oscuro */
-  /* Cambiar el padding específico */
-}
-.btn-secondary:hover {
-  background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
-  border-radius: 5px; /* Asegura esquinas redondeadas en hover */
+/* Estilo del logo */
+.logo img {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el logo */
+  border-radius: 20px; /* Esquinas redondeadas */
+  height: 50px; /* Altura fija del logo */
+  width: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Centra el logo horizontalmente con margin auto */
+  margin: 0 auto; /* Centra el logo dentro del contenedor */
 }
 
 /* Estilos generales para el cuerpo */
@@ -161,29 +151,6 @@ form select {
   color: #155724; /* Texto verde oscuro para éxitos */
 }
 
-header {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  /* Uso del mixin */
-  color: white;
-  position: fixed; /* Fija el header en la parte superior durante el scroll */
-  width: 100%; /* El header ocupa todo el ancho */
-  top: 0; /* Anclado en la parte superior de la pantalla */
-  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-}
-
-/* Estilo del logo */
-.logo img {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el logo */
-  border-radius: 20px; /* Esquinas redondeadas */
-  height: 50px; /* Altura fija del logo */
-  width: auto; /* Mantiene la proporción de la imagen */
-  display: block; /* Centra el logo horizontalmente con margin auto */
-  margin: 0 auto; /* Centra el logo dentro del contenedor */
-}
-
 /* Estilos del menú de navegación */
 nav ul {
   list-style-type: none; /* Elimina el estilo por defecto de las listas */
@@ -207,6 +174,39 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #004d00; /* Color de fondo al pasar el mouse */
   border-radius: 5px; /* Esquinas redondeadas en el estado hover */
+}
+
+.btn-primary {
+  display: inline-block; /* Se comporta como un elemento inline-block */
+  padding: 8px 15px; /* Padding personalizable */
+  color: white; /* Color de texto blanco */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-weight: bold; /* Negrita para el texto */
+  border-radius: 5px; /* Esquinas redondeadas personalizables */
+  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+  background-color: #006400; /* Color de fondo verde oscuro */
+  /* Aplica el mixin */
+  width: 100%; /* El botón ocupa todo el ancho disponible */
+}
+.btn-primary:hover {
+  background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
+  border-radius: 5px; /* Asegura esquinas redondeadas en hover */
+}
+
+.btn-secondary {
+  display: inline-block; /* Se comporta como un elemento inline-block */
+  padding: 8px 15px; /* Padding personalizable */
+  color: white; /* Color de texto blanco */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-weight: bold; /* Negrita para el texto */
+  border-radius: 5px; /* Esquinas redondeadas personalizables */
+  transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+  background-color: #006400; /* Color de fondo verde oscuro */
+  /* Cambiar el padding específico */
+}
+.btn-secondary:hover {
+  background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
+  border-radius: 5px; /* Asegura esquinas redondeadas en hover */
 }
 
 .news-card {
