@@ -184,41 +184,6 @@ header {
   margin: 0 auto; /* Centra el logo dentro del contenedor */
 }
 
-/* Diseño responsivo */
-@media (max-width: 768px) {
-  .iframe-container iframe {
-    flex: 1 1 100%;
-  }
-}
-/* Ajustes de responsividad para artículos */
-@media (max-width: 768px) {
-  .news article {
-    padding: 15px;
-  }
-  .iframe-container {
-    padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
-  }
-}
-/* Ajustes de responsividad */
-@media (max-width: 768px) {
-  nav ul {
-    display: block; /* Menú vertical en pantallas pequeñas */
-  }
-  nav ul li {
-    display: inline; /* Los elementos del menú se apilan horizontalmente */
-    margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
-  }
-  .featured-matches .grid {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-  }
-  /* Ajuste del margen superior para el body en móviles */
-  body {
-    margin-top: 80px; /* Ajusta el margen superior según sea necesario */
-  }
-  .featured-matches .grid {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-  }
-}
 /* Estilos del menú de navegación */
 nav ul {
   list-style-type: none; /* Elimina el estilo por defecto de las listas */
@@ -323,4 +288,37 @@ nav ul li a:hover {
 
 .card .btn-secondary:hover {
   background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .iframe-container iframe {
+    flex: 1 1 100%;
+  }
+}
+/* Ajustes de responsividad para artículos */
+@media (max-width: 768px) {
+  .news article {
+    padding: 15px;
+  }
+  .iframe-container {
+    padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
+  }
+}
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+  nav ul {
+    display: block; /* Menú vertical en pantallas pequeñas */
+  }
+  nav ul li {
+    display: block; /* Los elementos del menú se apilan verticalmente */
+    margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
+  }
+  /* Ajuste del margen superior para el body en móviles */
+  body {
+    margin-top: 130px; /* Ajusta el margen superior según sea necesario */
+  }
+  .featured-matches .grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
 }/*# sourceMappingURL=styles.css.map */
