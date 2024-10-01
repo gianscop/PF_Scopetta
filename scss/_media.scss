@@ -1,33 +1,60 @@
+/* Ajustes de responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
-  .iframe-container iframe {
-      flex: 1 1 100%;
-  }
-}
 
-/* Ajustes de responsividad para artículos */
-@media (max-width: 768px) {
-  .news article {
-      padding: 15px;
-  }
-
-  .iframe-container {
-      padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
-  }
-}
-
-/* Ajustes de responsividad */
-@media (max-width: 768px) {
+  /* Estilos generales del menú */
   nav ul {
-      display: block; /* Menú vertical en pantallas pequeñas */
+    display: block; /* Menú vertical en pantallas pequeñas */
   }
 
   nav ul li {
-      display: block; /* Los elementos del menú se apilan verticalmente */
-      margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
+    display: block; /* Los elementos del menú se apilan verticalmente */
+    margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
   }
 
+  /* Ocultar la barra de navegación de escritorio en pantallas pequeñas */
+  .d-lg-flex {
+    display: none !important;
+  }
+
+  /* Mostrar la navbar móvil */
+  .navbar {
+    display: block;
+  }
+
+  /* Ajustar el comportamiento del menú colapsable móvil */
+  .navbar-collapse {
+    position: absolute;
+    top: 100%; /* Asegura que se despliegue justo debajo del header */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    background-color: #343a40; /* Asegura el fondo oscuro en el menú desplegable */
+    z-index: 1000;
+  }
+
+  .navbar-nav {
+    display: block; /* Asegura que el menú sea vertical */
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px; /* Espacio entre los enlaces del menú */
+  }
+
+  /* Ajustes adicionales para artículos */
+  .news article {
+    padding: 15px;
+  }
+
+  /* Ajustes para los contenedores de iframe */
+  .iframe-container {
+    padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
+  }
+
+  .iframe-container iframe {
+    flex: 1 1 100%;
+  }
+
+  /* Ajustes para las cuadrículas de partidos */
   .featured-matches .grid {
-      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
   }
 }
-
