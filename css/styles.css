@@ -184,46 +184,6 @@ header {
   margin: 0 auto; /* Centra el logo dentro del contenedor */
 }
 
-/* Diseño responsivo */
-@media (max-width: 768px) {
-  .iframe-container iframe {
-    flex: 1 1 100%;
-  }
-}
-/* Ajustes de responsividad para artículos */
-@media (max-width: 768px) {
-  .news article {
-    padding: 15px;
-  }
-  .iframe-container {
-    padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
-  }
-}
-/* Ajustes de responsividad */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column; /* Cambiamos el menú a columna en móviles */
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para destacar el menú */
-    position: absolute;
-    top: 60px; /* Ajustamos debajo del header */
-    left: 0;
-    right: 0;
-    padding: 10px 0;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-  nav ul li a {
-    font-size: 20px;
-    padding: 15px;
-    color: white;
-  }
-  header {
-    position: relative;
-  }
-}
 /* Estilos del menú de navegación */
 nav ul {
   list-style-type: none; /* Elimina el estilo por defecto de las listas */
@@ -328,6 +288,57 @@ nav ul li a:hover {
 
 .card .btn-secondary:hover {
   background-color: #004d00; /* Cambio de color de fondo al pasar el mouse */
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .iframe-container iframe {
+    flex: 1 1 100%;
+  }
+}
+/* Ajustes de responsividad para artículos */
+@media (max-width: 768px) {
+  .news article {
+    padding: 15px;
+  }
+  .iframe-container {
+    padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
+  }
+}
+/* Ajustes solo para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Barra de navegación fija en la parte superior */
+  nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la barra esté por encima del contenido */
+    background-color: black;
+    padding: 10px 0; /* Ajusta el padding para evitar espacio innecesario */
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Cambia a columna para dispositivos móviles */
+    align-items: center;
+  }
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  /* Ajustar el contenido principal para que no se superponga con la barra */
+  body {
+    padding-top: 60px; /* Agrega suficiente espacio para que el contenido esté debajo de la barra */
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
