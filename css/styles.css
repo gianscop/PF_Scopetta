@@ -333,6 +333,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Opción adicional para asegurar que esté centrado */
   }
   /* Hacer que el menú desplegable aparezca debajo del header */
   .navbar-collapse {
