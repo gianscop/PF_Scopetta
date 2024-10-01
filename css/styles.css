@@ -189,6 +189,9 @@ nav ul {
   list-style-type: none; /* Elimina el estilo por defecto de las listas */
   text-align: center; /* Centra los elementos del menú */
   padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 nav ul li {
@@ -207,6 +210,30 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #004d00; /* Color de fondo al pasar el mouse */
   border-radius: 5px; /* Esquinas redondeadas en el estado hover */
+}
+
+/* Estilos para el menú hamburguesa */
+.navbar-toggler {
+  background-color: transparent; /* Fondo transparente para el botón */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+}
+
+/* Para ocultar el menú en móviles inicialmente */
+#navLinks {
+  display: none; /* Ocultar el menú por defecto */
+  flex-direction: column; /* Apilar los elementos verticalmente */
+  position: absolute; /* Posicionar el menú */
+  background-color: black; /* Color de fondo del menú */
+  width: 100%; /* Ancho completo */
+  top: 50px; /* Posicionar debajo de la barra */
+  left: 0; /* Alinear a la izquierda */
+  z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+/* Estilo para mostrar el menú */
+#navLinks.show {
+  display: flex; /* Mostrar el menú cuando está activo */
 }
 
 .news-card {
@@ -305,47 +332,13 @@ nav ul li a:hover {
     padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
   }
 }
-/* Ajustes solo para dispositivos móviles */
-@media (max-width: 768px) {
-  /* Barra de navegación fija y responsiva */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 999;
-    padding: 10px 0;
-    box-sizing: border-box;
+/* Estilos para móviles nav bar */
+@media (min-width: 769px) {
+  #navLinks {
+    display: flex; /* Mostrar el menú normalmente en pantallas grandes */
   }
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  nav ul li {
-    margin: 0;
-    width: 100%;
-  }
-  nav ul li a {
-    display: block;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    width: 100%;
-  }
-  nav ul li a:hover {
-    background-color: #333;
-  }
-  /* Ajustar el contenido para evitar superposición */
-  body {
-    margin-top: 60px; /* Ajusta este valor si la barra es más alta */
+  .navbar-toggler {
+    display: none; /* Ocultar el botón en pantallas grandes */
   }
 }
 
