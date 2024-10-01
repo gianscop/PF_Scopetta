@@ -309,7 +309,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   /* Barra de navegación fija en la parte superior */
   nav {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
