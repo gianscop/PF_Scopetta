@@ -318,11 +318,7 @@ nav ul li a:hover {
 /* Ajustes para que la barra de navegación de escritorio no se muestre en móviles */
 @media (max-width: 768px) {
   nav {
-    display: none; /* Oculta la barra de navegación original */
-  }
-  /* Navegación móvil */
-  .navbar {
-    display: block; /* Muestra la barra de navegación de Bootstrap */
+    display: none; /* Oculta la barra de navegación original en pantallas pequeñas */
   }
 }
 /* La barra de navegación de escritorio solo se muestra en pantallas grandes */
@@ -331,7 +327,7 @@ nav ul li a:hover {
     display: none; /* Oculta la barra de navegación móvil */
   }
   nav {
-    display: block; /* Muestra la barra de navegación original */
+    display: block; /* Muestra la barra de navegación original en pantallas grandes */
   }
 }
 

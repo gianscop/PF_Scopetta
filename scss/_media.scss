@@ -29,16 +29,10 @@ body {
   }
 }
  
-
 /* Ajustes para que la barra de navegación de escritorio no se muestre en móviles */
 @media (max-width: 768px) {
   nav {
-      display: none; /* Oculta la barra de navegación original */
-  }
-  
-  /* Navegación móvil */
-  .navbar {
-      display: block; /* Muestra la barra de navegación de Bootstrap */
+      display: none; /* Oculta la barra de navegación original en pantallas pequeñas */
   }
 }
 
@@ -49,6 +43,6 @@ body {
   }
 
   nav {
-      display: block; /* Muestra la barra de navegación original */
+      display: block; /* Muestra la barra de navegación original en pantallas grandes */
   }
 }
