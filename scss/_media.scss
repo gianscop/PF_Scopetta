@@ -1,35 +1,60 @@
-
+/* Estilos para pantallas pequeñas (por ejemplo, móviles) */
 @media (max-width: 768px) {
-  nav {
-    display: none; /* Oculta la barra de navegación original */
+  /* Centrar el botón de hamburguesa */
+  .navbar-toggler {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  /* Estilos del menú de navegación móvil */
-    .navbar-collapse {
+  /* Menú desplegable que ocupe todo el ancho */
+  .navbar-collapse {
     position: absolute;
-    top: 100%; /* Asegura que el menú esté justo debajo del header */
+    top: 100%; /* Hace que el menú se despliegue debajo del header */
     left: 0;
     width: 100%;
-    min-height: 200px; /* Agrega una altura mínima para asegurar que se vea el menú */
-    background-color: $color-negro-transparente;
-    border-radius: $radio-borde-medio;
-    box-shadow: $sombra-fuerte;
-    z-index: 1000;
+    background-color: $color-negro-transparente; /* Fondo del menú desplegable */
+    border-radius: $radio-borde-medio; /* Bordes redondeados */
+    box-shadow: $sombra-fuerte; /* Sombra */
+    z-index: 1000; /* Superponer sobre el contenido */
   }
 
-  /* Asegurarse de que los enlaces estén bien alineados */
-  .navbar ul li {
-    display: block;
-    margin: 10px 0;
+  /* Ajustar el contenido dentro del contenedor */
+  .container {
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    align-items: center;
   }
 
-  .navbar-toggler {
-    margin: 0 auto; /* Centra el botón de hamburguesa */
-  }
-  
-  /* Alinear y centrar correctamente el logo y el botón */
-  header .logo {
-    margin: 0 auto;
+  /* Lista de navegación (sin bullets) */
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ocupa todo el ancho */
     text-align: center;
+  }
+
+  /* Elementos de la lista */
+  .navbar-nav .nav-item {
+    margin: 10px 0; /* Espacio entre elementos */
+  }
+
+  /* Enlaces dentro del menú */
+  .navbar-nav .nav-link {
+    color: $color-texto-blanco;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    display: block;
+    background-color: $color-verde-hover; /* Puedes ajustar los colores a los de tu página */
+    border-radius: $radio-borde-pequeno;
+  }
+
+  /* Hover en los enlaces */
+  .navbar-nav .nav-link:hover {
+    background-color: darken($color-verde-hover, 10%);
   }
 }
