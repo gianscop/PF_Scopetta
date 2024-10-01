@@ -292,21 +292,16 @@ nav ul li a:hover {
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
+  /* Ajustes generales para pantallas pequeñas */
   .iframe-container iframe {
     flex: 1 1 100%;
   }
-}
-/* Ajustes de responsividad para artículos */
-@media (max-width: 768px) {
   .news article {
     padding: 15px;
   }
   .iframe-container {
     padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
   }
-}
-/* Ajustes de responsividad */
-@media (max-width: 768px) {
   /* Ajuste del margen superior para el body en móviles */
   body {
     margin-top: 130px; /* Ajusta el margen superior según sea necesario */
@@ -314,18 +309,22 @@ nav ul li a:hover {
   .featured-matches .grid {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
   }
-}
-/* Ajustes para que la barra de navegación de escritorio no se muestre en móviles */
-@media (max-width: 768px) {
+  /* Ocultar la barra de navegación original en pantallas pequeñas */
   nav {
     display: none; /* Oculta la barra de navegación original en pantallas pequeñas */
   }
+  /* Mostrar la barra de navegación móvil de Bootstrap */
+  .navbar {
+    display: block; /* Muestra la barra de navegación móvil en pantallas pequeñas */
+  }
 }
-/* La barra de navegación de escritorio solo se muestra en pantallas grandes */
+/* Ajustes para pantallas grandes */
 @media (min-width: 769px) {
+  /* Ocultar la barra de navegación móvil en pantallas grandes */
   .navbar {
     display: none; /* Oculta la barra de navegación móvil */
   }
+  /* Mostrar la barra de navegación original en pantallas grandes */
   nav {
     display: block; /* Muestra la barra de navegación original en pantallas grandes */
   }
