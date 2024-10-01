@@ -31,24 +31,3 @@
   }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    display: block; /* Mostrar navbar en móvil */
-  }
-
-  .navbar-toggler {
-    margin: 0 auto; /* Centrar el botón de hamburguesa */
-  }
-
-  .navbar-collapse {
-    width: 100%; /* Asegura que el menú ocupe todo el ancho de la pantalla */
-  }
-
-  .navbar-nav {
-    text-align: center; /* Centrar los enlaces del menú */
-  }
-
-  .navbar-nav .nav-item {
-    margin: 10px 0; /* Añadir espacio entre los enlaces */
-  }
-}
