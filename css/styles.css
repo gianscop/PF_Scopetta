@@ -199,16 +199,33 @@ header {
     padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
   }
 }
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .iframe-container iframe {
+        flex: 1 1 100%;
+    }
+}
+
+/* Ajustes de responsividad para artículos */
+@media (max-width: 768px) {
+    .news article {
+        padding: 15px;
+    }
+
+    .iframe-container {
+        padding-bottom: 75%; /* Proporción de aspecto más alta para pantallas pequeñas */
+    }
+}
+
 /* Ajustes de responsividad */
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
     
         nav ul {
             display: block; /* Menú vertical en pantallas pequeñas */
         }
     
         nav ul li {
-            display: inline; /* Los elementos del menú se apilan verticalmente */
+            display: block; /* Los elementos del menú se apilan verticalmente */
             margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
         }
     
