@@ -18,30 +18,19 @@
 
 /* Ajustes de responsividad */
 @media (max-width: 768px) {
-    @media (max-width: 768px) {
+    
         nav ul {
-            display: none; /* Oculta el menú en móviles por defecto */
+            display: block; /* Menú vertical en pantallas pequeñas */
         }
     
-        .navbar-toggler {
-            display: block; /* Muestra el botón de menú hamburguesa */
-            background: none;
-            border: none;
-            font-size: 1.5rem;
+        nav ul li {
+            display: block; /* Los elementos del menú se apilan verticalmente */
+            margin-bottom: 10px; /* Espacio entre elementos del menú en vertical */
         }
-        
-        .menu-open nav ul {
-            display: block; /* Muestra el menú cuando está abierto */
-            flex-direction: column;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.8);
-            top: 60px;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            text-align: center;
+    
+        .featured-matches .grid {
+            grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
         }
-    }
     
     /* Ajuste del margen superior para el body en móviles */
     body {
