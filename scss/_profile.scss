@@ -13,12 +13,12 @@
 
 /* Efecto de hover en la tarjeta */
 .card:hover {
-    transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor */
+    transform: scale(1.10); /* Aumenta el tamaño al pasar el cursor */
 }
 
 /* Estilo del botón dentro de la tarjeta */
 .card .btn-secondary {
-    @include boton-verde(8px 15px); /* Aplica el mixin aquí también */
+    @include boton-verde(8px 15px); /* Aplica el mixin  */
 }
 
 

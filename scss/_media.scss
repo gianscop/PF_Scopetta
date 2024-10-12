@@ -7,7 +7,7 @@
 /* Ajustes de responsividad para artículos */
 @media (max-width: 768px) {
   .news article {
-      padding: 15px;
+      padding: 20px;
   }
 
   .iframe-container {
@@ -28,5 +28,14 @@
 
   .featured-matches .grid {
       grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
+
+
+/* Ajustes de responsividad en carusel */
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 300px; // Ajuste para pantallas más pequeñas
   }
 }

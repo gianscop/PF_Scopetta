@@ -6,7 +6,7 @@
   padding: $padding;
 }
 
-@mixin boton-verde($padding: 8px 15px, $border-radius: 5px) {
+@mixin boton-verde($padding: 15px 20px, $border-radius: 10px) {
   display: inline-block; /* Se comporta como un elemento inline-block */
   padding: $padding; /* Padding personalizable */
   color: white; /* Color de texto blanco */

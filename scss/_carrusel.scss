@@ -1,0 +1,12 @@
+.carousel-item img {
+  width: 100%; // Asegura que las imágenes ocupen todo el ancho del contenedor
+  height: 500px; // Fija la altura para que las imágenes sean cuadradas
+  object-fit: cover; // Para ajustar las imágenes sin distorsión
+  }
+  
+  .carousel-caption {
+    @include fondo-transparente($color-negro-transparente, $radio-borde-medio, $sombra-media, $espaciado-grande);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
