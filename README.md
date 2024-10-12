@@ -1,2 +1,1 @@
-EN EL MAIN- VERSION ACTUALIZADA CON SCSS Y SUS COMPONENTES.
-EN EL BRANCH-VERSION ANTERIOR . 
+Mucho reniegue con el menu hamburguesa, van a ver mi frustracion muy depositada ahi jajaaj
